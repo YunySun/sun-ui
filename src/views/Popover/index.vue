@@ -1,6 +1,6 @@
 <template>
     <div class="popover">
-        <yuny-popover title="标题"
+        <sun-popover title="标题"
                       content="这是一个副标题这是一个副标题这是一个副标题这是一个副标题这是一个副标题"
                       width="200px"
                       direction="bottom"
@@ -8,7 +8,7 @@
                       @hide="hideAction"
         >
             <button slot="reference">点击事件</button>
-        </yuny-popover>
+        </sun-popover>
 
         <br>
         <br>
@@ -25,26 +25,26 @@
         <br>
         <br>
         <br>
-        <yuny-popover title="标题"
+        <sun-popover title="标题"
                       content="这是一个副标题这是一个副标题这是一个副标题这是一个副标题这是一个副标题"
                       width="200px"
                       direction="top"
                       trigger="focus"
         >
             <button slot="reference">点击事件</button>
-        </yuny-popover>
+        </sun-popover>
         <br>
-        <yuny-popover title="标题"
+        <sun-popover title="标题"
                       content="这是一个副标题这是一个副标题这是一个副标题这是一个副标题这是一个副标题"
                       width="200px"
                       direction="right"
                       trigger="hover"
         >
             <button slot="reference">点击事件</button>
-        </yuny-popover>
+        </sun-popover>
         <span>test test test test test test test test test test test test test test test test test test test test test</span>
 
-        <yuny-popover title="标题"
+        <sun-popover title="标题"
                       content="这是一个副标题这是一个副标题这是一个副标题这是一个副标题这是一个副标题"
                       width="200px"
                       direction="left"
@@ -53,7 +53,7 @@
             <div slot="reference" style="margin-left: 300px">
                 <input type="text" placeholder="这是一个输入框">
             </div>
-        </yuny-popover>
+        </sun-popover>
     </div>
 </template>
 

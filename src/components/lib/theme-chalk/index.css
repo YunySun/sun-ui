@@ -1,0 +1,2 @@
+.sun-overflow-hidden{overflow: hidden !important;}@keyframes sun-fade-in {0%{opacity:0}to{opacity:1}} @-webkit-keyframes sun-fade-in {0%{opacity:0}to{opacity:1}} @keyframes sun-fade-out {0%{opacity:1}to{opacity:0}}  @-webkit-keyframes sun-fade-out {0%{opacity:1}to{opacity:0}}
+.sun-fade-enter-active {animation: .3s sun-fade-in} .sun-fade-leave-active {animation: .3s sun-fade-out}

@@ -4,11 +4,13 @@ import router from './router'
 import store from './store'
 // import { Popover } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
-import { Popover } from './components/yuny-ui'
+import '../src/components/lib/theme-chalk/index.css'
+import { Popover, Overlay, Popup } from './components/sun-ui'
 
-Vue.use(Popover);
+Vue.use(Popover).use(Overlay).use(Popup);
 
 Vue.config.productionTip = false;
+
 
 new Vue({
   router,

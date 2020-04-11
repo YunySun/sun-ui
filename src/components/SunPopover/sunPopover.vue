@@ -4,16 +4,16 @@
                     @after-enter="handleAfterEnter"
                     @after-leave="handleAfterLeave">
         >
-            <div class="yuny-popover"
-                 :class="'yuny-popover-'+direction"
+            <div class="sun-popover"
+                 :class="'sun-popover-'+direction"
                  :style="{width, top: top + 'px', left: left + 'px'}"
                  ref="popover"
                  v-show="!disabled && showPopover"
             >
-                <div class="yuny-popover__title" v-text="title"></div>
+                <div class="sun-popover__title" v-text="title"></div>
                 <slot>{{ content }}</slot>
-                <div ref="arrow" class="yuny__arrow"
-                     :class="'yuny-arrow-'+direction"
+                <div ref="arrow" class="sun__arrow"
+                     :class="'sun-arrow-'+direction"
                      :style="{left: arrowLeft + 'px', top: arrowTop + 'px'}">
                 </div>
             </div>
@@ -26,7 +26,7 @@
     import {on, off} from '../utils'
     
     export default {
-        name: "YunyPopover",
+        name: "sunPopover",
         data() {
             return {
                 top: 'unset',
@@ -163,7 +163,7 @@
 
 <style scoped>
 
-    .yuny-popover {
+    .sun-popover {
         position: absolute;
         z-index: 999;
         padding: 20px;
@@ -176,29 +176,29 @@
         background-color: #fff;
     }
 
-    .yuny-popover-top {
+    .sun-popover-top {
         margin-top: -10px;
     }
 
-    .yuny-popover-bottom {
+    .sun-popover-bottom {
         margin-top: 10px;
     }
 
-    .yuny-popover-left {
+    .sun-popover-left {
         margin-left: -10px;
     }
 
-    .yuny-popover-right {
+    .sun-popover-right {
         margin-left: 10px;
     }
 
-    .yuny-popover__title {
+    .sun-popover__title {
         color: #333;
         font-size: 16px;
         margin-bottom: 10px;
     }
 
-    .yuny__arrow {
+    .sun__arrow {
         position: absolute;
         top: -6px;
         margin-left: -3px;
@@ -212,29 +212,29 @@
         border-bottom-color: #e5e5e5;
     }
 
-    .yuny-arrow-top {
+    .sun-arrow-top {
         top: unset;
         bottom: -6px;
         transform: rotate(180deg);
     }
 
-    .yuny-arrow-left, .yuny-arrow-right {
+    .sun-arrow-left, .sun-arrow-right {
         top: 50%;
         margin-top: -3px;
     }
 
-    .yuny-arrow-right {
+    .sun-arrow-right {
         left: 0;
         transform: rotate(-90deg);
         margin-left: -9px;
     }
 
-    .yuny-arrow-left {
+    .sun-arrow-left {
         right: -9px;
         transform: rotate(90deg);
     }
 
-    .yuny__arrow:after {
+    .sun__arrow:after {
         content: '';
         position: absolute;
         top: 1px;

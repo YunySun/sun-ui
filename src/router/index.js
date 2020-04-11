@@ -7,12 +7,27 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home/index.vue')
+    component: () => import('../views/Home/index.vue')
   },
   {
     path: '/popover',
     name: 'popover',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Popover/index.vue')
+    component: () => import('../views/Popover/index.vue')
+  },
+  {
+    path: '/picker',
+    name: 'picker',
+    component: () => import('../views/Picker/index.vue')
+  },
+  {
+    path: '/overlay',
+    name: 'overlay',
+    component: () => import('../views/Overlay/index.vue')
+  },
+  {
+    path: '/popup',
+    name: 'popup',
+    component: () => import('../views/Popup/index.vue')
   }
 ];
 
