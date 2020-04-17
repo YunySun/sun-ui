@@ -1,58 +1,60 @@
 <template>
-    <div>123</div>
+  <transition :name="'sun-popup-slide-'+(transition||position)">
+    <div
+      v-show="value"
+      class="sun-popup"
+      :class="['sun-popup--'+(position||'center'), {'sun-popup--round': round}]"
+      :style="style"
+    >
+      <slot />
+    </div>
+  </transition>
 </template>
 
 <script>
-    import Vue from 'vue'
-    import sunOverlay from '../SunOverlay/sunOverlay'
-    export default {
-        name: "sunPopup",
-        data() {
-            return {
-                show: true
-            }
-        },
-        created() {
-            // console.log(this.$parent)
-            // console.log(Vue.extend())
-        },
-        mounted() {
-            // var Overlay = Vue.extend({
-            //     template: '<sun-overlay :show="show" @click="show = false"></sun-overlay>',
-            //     data: function () {
-            //         return {
-            //             show: this.show
-            //         }
-            //     }
-            // });
-            //
-            var overlay = new Vue({
-                el: document.createElement('div'),
-                render: function render(h) {
-                    return h(sunOverlay, {
-                        props: {
-                            show: true,
-                        },
-                        on: {
-                            click: () => {
-
-                            }
-                        }
-                    })
-                }
-            });
-            console.log(overlay);
-            console.log(this.$el.parentNode)
-            console.log(overlay.$el)
-            this.$el.parentNode.insertBefore(overlay.$el, this.$el);
-            // document.body.appendChild(overlay.$el);
-            // var overlay = new Overlay().$mount();
-            // console.log(this.$el.parentNode)
-            // this.$el.parentNode.appendChild(overlay)
-        }
+import PopupMixin from "../mixins/popup/index.js";
+export default {
+  name: "SunPopup",
+  mixins: [PopupMixin],
+  props: {
+    value: {
+      default: false,
+      type: Boolean,
+      required: true
+    },
+    transition: {
+      type: String
+    },
+    overlay: {
+      default: true,
+      type: Boolean
+    },
+    position: {
+      type: String
+    },
+    closeOnClickOverlay: {
+      default: true,
+      type: Boolean
+    },
+    round: {
+      type: Boolean,
+      default: false
+    },
+    duration: {
+      type: Number | String
     }
+  },
+  computed: {
+    style() {
+      return this.duration ? { transitionDuration: this.duration + "s" } : "";
+    }
+  },
+  created() {
+  },
+  mounted() {
+  }
+};
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
 </style>

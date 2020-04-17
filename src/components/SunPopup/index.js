@@ -1,9 +1,9 @@
-import sunPopup from './sunPopup';
+import sunPopup from "./sunPopup";
 
 const SunPopup = {
-    install: function (Vue) {
-        Vue.component(sunPopup.name, sunPopup);
-    }
+  install: function(Vue) {
+    Vue.component(sunPopup.name, sunPopup);
+  }
 };
 
 export default SunPopup;

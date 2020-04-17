@@ -1,9 +1,9 @@
-import sunOverlay from './sunOverlay'
+import sunOverlay from "./sunOverlay";
 
 const SunOverlay = {
-    install: function (Vue) {
-        Vue.component(sunOverlay.name, sunOverlay);
-    }
+  install: function(Vue) {
+    Vue.component(sunOverlay.name, sunOverlay);
+  }
 };
 
-export default SunOverlay
+export default SunOverlay;
