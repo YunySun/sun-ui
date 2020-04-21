@@ -28,6 +28,11 @@ const routes = [
     path: '/popup',
     name: 'popup',
     component: () => import('../views/Popup/index.vue')
+  },
+  {
+    path: '/datetimePicker',
+    name: 'datetimePicker',
+    component: () => import('../views/DatetimePicker/index.vue')
   }
 ];
 
