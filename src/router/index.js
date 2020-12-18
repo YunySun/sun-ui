@@ -38,6 +38,11 @@ const routes = [
     path: '/magnifier',
     name: 'magnifier',
     component: () => import('../views/Magnifier/index.vue')
+  },
+  {
+    path: '/navigationbar',
+    name: 'navigationBar',
+    component: () => import('../views/NavigationBar')
   }
 ];
 
